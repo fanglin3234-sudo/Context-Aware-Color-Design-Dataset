@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "CRDS Scenario Schema (v1.0)",
+  "description": "JSON Schema for one scenario record in the Context-Rich Design Scenarios (CRDS) dataset.",
+  "type": "object",
+  "required": [
+    "scenario_id",
+    "domain",
+    "domain_index",
+    "brief",
+    "audience_id",
+    "audience_label",
+    "reference_image",
+    "gold_palette_hex",
+    "gold_palette_lab",
+    "annotator_ids",
+    "annotator_kappa",
+    "design_intent_tags",
+    "annotation_date",
+    "version"
+  ],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "pattern": "^CRDS-(WEB|MKT|INF|ECM)-[0-9]{4}$",
+      "description": "Unique scenario identifier."
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["web_ui", "marketing", "infographic", "ecommerce"]
+    },
+    "domain_index": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "brief": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 2000,
+      "description": "Designer-facing scenario description."
+    },
+    "audience_id": {
+      "type": "string",
+      "enum": ["U01", "U02", "U03", "U04", "U05", "U06", "U07"]
+    },
+    "audience_label": {
+      "type": "string"
+    },
+    "reference_image": {
+      "type": ["string", "null"],
+      "description": "Relative path to the optional reference image, or null."
+    },
+    "gold_palette_hex": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$"
+      }
+    },
+    "gold_palette_lab": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": { "type": "number" }
+      },
+      "description": "Five [L, a, b] triplets in CIELAB (D65)."
+    },
+    "annotator_ids": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": { "type": "string" }
+    },
+    "annotator_kappa": {
+      "type": "number",
+      "minimum": -1.0,
+      "maximum": 1.0,
+      "description": "Per-scenario Krippendorff's alpha for the three annotators."
+    },
+    "design_intent_tags": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "items": { "type": "string" }
+    },
+    "annotation_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
