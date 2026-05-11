@@ -136,14 +136,4 @@ visual recommendation systems,
 accessibility-aware design,
 computational aesthetics,
 and vision–language research.
-11. Limitations
-The dataset reflects the stylistic conventions represented during annotation.
-Only one consolidated reference palette is provided per scenario.
-Domain coverage is limited to four application categories.
-Some scenarios contain text-only descriptions without reference imagery.
-12. License
-
-This dataset is released under:
-
-Creative Commons Attribution–NonCommercial 4.0 International (CC BY-NC 4.0)
 
