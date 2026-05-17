@@ -11,22 +11,6 @@ A curated dataset of **3,200 context-rich design scenarios** for research on int
 
 ---
 
-## Contents
-
-1. [Overview](#1-overview)
-2. [Quick start](#2-quick-start)
-3. [Statistics](#3-statistics)
-4. [Repository structure](#4-repository-structure)
-5. [Record schema](#5-record-schema)
-6. [Construction methodology](#6-construction-methodology)
-7. [Ethics](#7-ethics)
-8. [Limitations](#8-limitations)
-9. [Versioning](#9-versioning)
-10. [Citation](#10-citation)
-11. [Contact and licence](#11-contact-and-licence)
-
----
-
 ## 1. Overview
 
 Existing public colour-palette benchmarks (O'Donovan, Schloss–Palmer, Adobe Kuler, InfoColorizer) provide only short captions or layout primitives — not full design briefs with explicit audience and domain context. CRDS fills this gap by pairing each scenario with:
@@ -255,11 +239,3 @@ If you use CRDS, please cite the accompanying paper:
 
 ---
 
-## 11. Contact and licence
-
-**Maintainer**: Fang Liu, Academy of Arts, Qilu Normal University, Jinan, Shandong, 250013, China.
-**Email**: <fanglin3234@gmail.com>
-
-For questions, data requests (including raw per-annotator palettes or the reference-image bundle), or to report issues, please contact the maintainer or open an issue on this repository.
-
-**Licence**: CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial 4.0 International). See `LICENSE.txt` for the full text. By using this dataset you agree to cite the accompanying paper and to use the data for non-commercial research purposes only.
